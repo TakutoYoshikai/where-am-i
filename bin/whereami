@@ -1,0 +1,12 @@
+#!/usr/bin/ruby
+
+
+dir = Dir.pwd + "/"
+for i in 0..3 do 
+  dirs = Dir.glob(dir + "*/")
+  if dirs.count == 0
+    break
+  end
+  dir = dirs.sample
+end
+print dir
